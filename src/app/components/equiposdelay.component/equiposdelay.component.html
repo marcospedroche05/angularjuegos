@@ -1,0 +1,29 @@
+<div *ngIf="datos">
+    <h1>{{datos.equipo.nombre}}</h1>
+    <br>
+    <img src="{{datos.equipo.imagen}}" width="200px" />
+    <table>
+        <thead>
+            <tr>
+                <th>ID jugador</th>
+                <th>Nombre</th>
+                <th>Posicion</th>
+                <th>Imagen</th>
+                <th>Fecha nacimiento</th>
+                <th>Pais</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(jugador of datos.jugadoresEquipo; track jugador) {
+            <tr>
+                <td>{{jugador.idJugador}}</td>
+                <td>{{jugador.nombre}}</td>
+                <td>{{jugador.posicion}}</td>
+                <td><img src="{{jugador.imagen}}" width="150px"/></td>
+                <td>{{jugador.fechaNacimiento}}</td>
+                <td>{{jugador.pais}}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

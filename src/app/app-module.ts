@@ -7,11 +7,18 @@ import { FicherosComponent } from './components/ficheros.component/ficheros.comp
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { FicherosService } from './services/ficherosService';
+import { HomeapuestasComponent } from './components/homeapuestas.component/homeapuestas.component';
+import { MenuComponent } from './components/menu.component/menu.component';
+import { EquiposdelayComponent } from './components/equiposdelay.component/equiposdelay.component';
+import { ServiceFutbol } from './service/service.futbol';
 
 @NgModule({
   declarations: [
     App,
-    FicherosComponent
+    FicherosComponent,
+    HomeapuestasComponent,
+    MenuComponent,
+    EquiposdelayComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +28,8 @@ import { FicherosService } from './services/ficherosService';
   providers: [
     provideHttpClient(),
     provideBrowserGlobalErrorListeners(),
-    FicherosService
+    FicherosService,
+    ServiceFutbol
   ],
   bootstrap: [App]
 })
